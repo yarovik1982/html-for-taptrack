@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+   <link rel="stylesheet" href="./css/index.css">
+   <script src="./js/index.js" defer></script>
+   <title>Document</title>
+</head>
+
+<body>
+   <div class="layout">
+      <div class="layout-content">
+         <form @submit.prevent="sendPost">
+            <h2 class="text-center">Title</h2>
+            <div class="mb-3">
+               <label for="title" class="form-label">Адрес электронной почты</label>
+               <input type="text" class="form-control" id="title" v-model="title" />
+            </div>
+            <div class="mb-3">
+               <label for="body" class="form-label">Пароль</label>
+               <input type="text" class="form-control" id="body" v-model="body" />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-sm ">Отправить</button>
+         </form>
+      </div>
+   </div>
+
+   <header class="header py-1 bg-secondary">
+      <div class="container-fluid">
+         <div class="text-center">
+            <button class="btn btn-warning btn-sm text-white" id="action">Action</button>
+         </div>
+      </div>
+   </header>
+</body>
+
+</html>
